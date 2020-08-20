@@ -1,0 +1,169 @@
+body{
+	text-align: center;
+	padding: 0;
+	margin: 0;
+  }  
+.fade-in {
+	animation-name: fadeIn;
+	animation-duration: 1.3s;
+	animation-timing-function: cubic-bezier(0, 0, 0.4, 1);
+	animation-fill-mode: forwards;
+}
+  
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+.temp1{
+	background: url(../images/t1-bg.jpg) center 0 no-repeat;
+	min-height: 700px;
+	background-size: 100%;
+	@media #{$r1366}{
+		min-height: 580px;
+	}
+	@media #{$r1024}{
+		min-height: 400px;
+	}
+	@media #{$r768}{
+		min-height: 300px;
+	}
+	@media #{$r414}{
+		min-height: auto;
+    	padding: 80px 0;
+	}
+	@media #{$r320}{
+		padding: 65px 0;
+	}
+}
+.temp2{
+	padding: 20px 0;
+	@media #{$r414}{
+		padding-bottom: 0;
+	}
+	&_box{
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.block{
+			width: 49%;
+			margin-bottom: 20px;
+			img{
+				width: 100%;
+				display: block;
+			}
+		}
+	}
+}
+.temp3{
+	background: #addbfc;
+	padding: 30px 0;
+	@media #{$r414}{
+		padding: 20px 0;
+	}
+	.tieude{
+		text-transform: uppercase;
+		font-size: 36px;
+		font-weight: 600;
+		color: #00278f;
+		padding-bottom: 15px;
+		@media #{$r414}{
+			font-size: 22px;
+		}
+	}
+	.thumbnails{
+		li{
+			border: none;
+			width: auto;
+			margin: 0 20px;
+			color: #000;
+			font-size: 20px;
+			@media #{$r414}{
+				font-size: 15px;
+				margin: 0 5px;
+			}
+			&:focus{
+				outline: unset;
+			}
+		}
+		.tns-nav-active{
+			border: none;
+			color: #f23e3d;
+		}
+	}
+	&__box2{
+		position: relative;
+		padding: 10px 0 30px;
+		@media #{$r414}{
+			padding-top: 0;
+		}
+	}
+	.tns-item{
+		@media #{$r414}{
+			width: 100%;
+		}
+		img{
+			@media #{$r414}{
+				width: 100%;
+			}
+		}
+	}
+    .tns-nav{
+        position: absolute;
+        bottom: 0;
+        text-align: center;
+        z-index: 2;
+        margin: 0 auto;
+        width: 100%;
+        .tns-nav-active {
+            background: #e3a261;
+        }
+    }
+    .tns-controls [aria-controls]{
+        font-size: 18px;
+        color: #fff;
+        padding: 0 10px;
+        line-height: 0;
+        height: 28px;
+        margin: 0 10px;
+        background-color: #ffa200;
+        @media #{$r414}{
+			font-size: 12px;
+			padding: 0 5px;
+			height: 23px;
+        }
+        &:nth-child(1){
+            position: absolute;
+            top: 45%;
+            left: 175px;
+			z-index: 1;
+			@media #{$r1024}{
+				left: 75px;
+			}
+			@media #{$r768}{
+				left: 0;
+			}
+        }
+        &:nth-child(2){
+            position: absolute;
+            top: 45%;
+            right: 185px;
+			z-index: 1;
+			@media #{$r1024}{
+				right: 85px;
+			}
+			@media #{$r768}{
+				right: 10px;
+			}
+        }
+    }
+
+}
+  
+  
+	
